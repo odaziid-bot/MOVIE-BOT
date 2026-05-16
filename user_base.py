@@ -1,5 +1,7 @@
 import sqlite3
 
+#База данных
+
 def user_db(name, fav_genre):
 
     conn = sqlite3.connect("user_database.db")
