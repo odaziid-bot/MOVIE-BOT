@@ -93,7 +93,6 @@ def fav_genre_key_1():
 
 def menu_do():
     builder = ReplyKeyboardBuilder()
-    builder.add(types.KeyboardButton(text="Добавить в избранное 🔖"))
     builder.add(types.KeyboardButton(text="Вернуться ♻️"))
     builder.adjust(2)
     return builder.as_markup(resize_keyboard=True)
@@ -101,7 +100,26 @@ def menu_do():
 linkme1 = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link1_1")
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link1_1"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_1_1")
+        ]
+    ]
+)
+
+linkme2 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link1_2"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_1_2")
+        ]
+    ]
+)
+
+linkme3 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link1_3"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_1_3")
         ]
     ]
 )
