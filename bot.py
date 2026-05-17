@@ -13,7 +13,7 @@ from link_get import router as link_get_router
 from menu import router as menu_router
 from apart_handlers import router as apart_router
 
-TOKEN_bot = #YOUR TOKEN 
+TOKEN_bot = "8141810941:AAF4UlZ7EOyzQFOL5ma5vNwLZSy8PKBrUhc"
 
 dp = Dispatcher()
 
