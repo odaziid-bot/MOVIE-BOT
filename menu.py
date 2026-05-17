@@ -17,7 +17,7 @@ from movies import western, comedy, horror, action, sci_fi
 from keyboards import chek_1, chek_2, chek_3, chek_4, chek_5
 from keyboards import choice_key
 from keyboards import menu_do
-from keyboards import linkme1
+from keyboards import linkme1, linkme2, linkme3
 
 router = Router()
 
@@ -84,9 +84,9 @@ async def mov1_list(callback: CallbackQuery):
     await callback.message.answer("ПОДБОРКА:", reply_markup=menu_do())
     await callback.message.answer(f"НАЗВАНИЕ:\n{western[0]['name']}\n\nОПИСАНИЕ:\n{western[0]['descript']}", reply_markup=linkme1)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{western[1]['name']}\n\nОПИСАНИЕ:\n{western[1]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{western[1]['name']}\n\nОПИСАНИЕ:\n{western[1]['descript']}", reply_markup=linkme2)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}", reply_markup=linkme3)
 
 @router.callback_query(F.data == "get_chek_2")
 async def mov2_list(callback: CallbackQuery):

@@ -29,4 +29,6 @@ def user_db(name, fav_genre):
     for row in all_data:
         print(*row)
 
+
+
     conn.commit()

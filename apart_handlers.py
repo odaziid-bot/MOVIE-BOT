@@ -12,6 +12,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from movies import western, comedy, horror, action, sci_fi
 from keyboards import fav_genre_key_1
 from keyboards import menu_do
+from keyboards import linkme1, linkme2
 
 router = Router()
 
@@ -22,11 +23,11 @@ async def return_menu(message: Message):
 @router.message(F.text == "Вестерн 🤠🏜️")
 async def ret_menu_handler_1(message: Message):
     await message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await message.answer(f"НАЗВАНИЕ:\n{western[0]['name']}\n\nОПИСАНИЕ:\n{western[0]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{western[0]['name']}\n\nОПИСАНИЕ:\n{western[0]['descript']}", reply_markup=linkme1)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{western[1]['name']}\n\nОПИСАНИЕ:\n{western[1]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{western[1]['name']}\n\nОПИСАНИЕ:\n{western[1]['descript']}", reply_markup=linkme2)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}", reply_markup=linkme2)
 
 @router.message(F.text == "Комедия 🤣")
 async def ret_menu_handler_2(message: Message):

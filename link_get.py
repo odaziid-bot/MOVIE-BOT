@@ -15,3 +15,15 @@ router = Router()
 async def lin1_1_handler(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("ССЫЛКА НА ФИЛЬМ:\nhttps://kinogo.media/18231-odnazhdy-na-dikom-zapade.html\nПриятного просмотра ✨✨✨")
+
+@router.callback_query(F.data == "link1_2")
+async def lin1_2_handler(callback: CallbackQuery):
+    await callback.answer()
+    await callback.message.answer("ССЫЛКА НА ФИЛЬМ:\nhttps://kinogo.online/filmy/26027-horoshij-plohoj-zloj.html\nПриятного просмотра ✨✨✨")
+
+@router.callback_query(F.data == "link1_3")
+async def lin1_3_handler(callback: CallbackQuery):
+    await callback.answer()
+    await callback.message.answer("ССЫЛКА НА ФИЛЬМ:\nhttps://kinogo.online/filmy/3679-neproschennyj.html\nПриятного просмотра ✨✨✨")
+
+    
