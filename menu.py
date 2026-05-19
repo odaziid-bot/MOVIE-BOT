@@ -17,7 +17,7 @@ from movies import western, comedy, horror, action, sci_fi
 from keyboards import chek_1, chek_2, chek_3, chek_4, chek_5
 from keyboards import choice_key
 from keyboards import menu_do
-from keyboards import linkme1, linkme2, linkme3
+from keyboards import linkme1, linkme2, linkme3, linkme4, linkme5, linkme6, linkme7, linkme8, linkme9, linkme10, linkme11, linkme12, linkme13, linkme14, linkme15
 
 router = Router()
 
@@ -92,41 +92,41 @@ async def mov1_list(callback: CallbackQuery):
 async def mov2_list(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await callback.message.answer(f"НАЗВАНИЕ:\n{comedy[0]['name']}\n\nОПИСАНИЕ:\n{comedy[0]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{comedy[0]['name']}\n\nОПИСАНИЕ:\n{comedy[0]['descript']}", reply_markup=linkme4)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{comedy[1]['name']}\n\nОПИСАНИЕ:\n{comedy[1]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{comedy[1]['name']}\n\nОПИСАНИЕ:\n{comedy[1]['descript']}", reply_markup=linkme5)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{comedy[2]['name']}\n\nОПИСАНИЕ:\n{comedy[2]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{comedy[2]['name']}\n\nОПИСАНИЕ:\n{comedy[2]['descript']}", reply_markup=linkme6)
 
 @router.callback_query(F.data == "get_chek_3")
 async def mov3_list(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await callback.message.answer(f"НАЗВАНИЕ:\n{horror[0]['name']}\n\nОПИСАНИЕ:\n{horror[0]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{horror[0]['name']}\n\nОПИСАНИЕ:\n{horror[0]['descript']}",  reply_markup=linkme7)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{horror[1]['name']}\n\nОПИСАНИЕ:\n{horror[1]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{horror[1]['name']}\n\nОПИСАНИЕ:\n{horror[1]['descript']}",  reply_markup=linkme8)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{horror[2]['name']}\n\nОПИСАНИЕ:\n{horror[2]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{horror[2]['name']}\n\nОПИСАНИЕ:\n{horror[2]['descript']}",  reply_markup=linkme9)
 
 @router.callback_query(F.data == "get_chek_4")
 async def mov4_list(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await callback.message.answer(f"НАЗВАНИЕ:\n{action[0]['name']}\n\nОПИСАНИЕ:\n{action[0]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{action[0]['name']}\n\nОПИСАНИЕ:\n{action[0]['descript']}", reply_markup=linkme10)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{action[1]['name']}\n\nОПИСАНИЕ:\n{action[1]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{action[1]['name']}\n\nОПИСАНИЕ:\n{action[1]['descript']}",  reply_markup=linkme11)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{action[2]['name']}\n\nОПИСАНИЕ:\n{action[2]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{action[2]['name']}\n\nОПИСАНИЕ:\n{action[2]['descript']}",  reply_markup=linkme12)
 
 @router.callback_query(F.data == "get_chek_5")
 async def mov5_list(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await callback.message.answer(f"НАЗВАНИЕ:\n{sci_fi[0]['name']}\n\nОПИСАНИЕ:\n{sci_fi[0]['descript']}", )
+    await callback.message.answer(f"НАЗВАНИЕ:\n{sci_fi[0]['name']}\n\nОПИСАНИЕ:\n{sci_fi[0]['descript']}", reply_markup=linkme13)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{sci_fi[1]['name']}\n\nОПИСАНИЕ:\n{sci_fi[1]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{sci_fi[1]['name']}\n\nОПИСАНИЕ:\n{sci_fi[1]['descript']}", reply_markup=linkme14)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{sci_fi[2]['name']}\n\nОПИСАНИЕ:\n{sci_fi[2]['descript']}")
+    await callback.message.answer(f"НАЗВАНИЕ:\n{sci_fi[2]['name']}\n\nОПИСАНИЕ:\n{sci_fi[2]['descript']}", reply_markup=linkme15)
 
 @router.callback_query(F.data == "get_chek_2")
 async def mov2_list(callback: CallbackQuery):

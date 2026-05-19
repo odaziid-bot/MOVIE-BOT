@@ -125,3 +125,120 @@ linkme3 = InlineKeyboardMarkup(
 )
 
 
+linkme4 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link2_1"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_2_1")
+        ]
+    ]
+)
+
+
+linkme5 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link2_2"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_2_2")
+        ]
+    ]
+)
+
+
+linkme6 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link2_3"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_2_3")
+        ]
+    ]
+)
+
+linkme7 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link3_1"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_3_1")
+        ]
+    ]
+)
+
+linkme8 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link3_2"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_3_2")
+        ]
+    ]
+)
+
+linkme9 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link3_3"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_3_3")
+        ]
+    ]
+)
+
+linkme10 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link4_1"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_4_1")
+        ]
+    ]
+)
+
+linkme11 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link4_2"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_4_2")
+        ]
+    ]
+)
+
+linkme12 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link4_3"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_4_3")
+        ]
+    ]
+)
+
+linkme13 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link5_1"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_5_1")
+        ]
+    ]
+)
+
+linkme14 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link5_2"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_5_2")
+        ]
+    ]
+)
+
+linkme15 = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Получить ссылку на фильм ▶️", callback_data="link5_3"),
+            InlineKeyboardButton(text="Добавить в избранное 🔖", callback_data="get_fav_5_3")
+        ]
+    ]
+)
+
+
+
+
+
+
+
+

@@ -12,7 +12,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from movies import western, comedy, horror, action, sci_fi
 from keyboards import fav_genre_key_1
 from keyboards import menu_do
-from keyboards import linkme1, linkme2
+from keyboards import linkme1, linkme2, linkme3, linkme4, linkme5, linkme6, linkme7, linkme8, linkme9, linkme10, linkme11, linkme12, linkme13, linkme14, linkme15
 
 router = Router()
 
@@ -27,40 +27,40 @@ async def ret_menu_handler_1(message: Message):
     await asyncio.sleep(1)
     await message.answer(f"НАЗВАНИЕ:\n{western[1]['name']}\n\nОПИСАНИЕ:\n{western[1]['descript']}", reply_markup=linkme2)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}", reply_markup=linkme2)
+    await message.answer(f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}", reply_markup=linkme3)
 
 @router.message(F.text == "Комедия 🤣")
 async def ret_menu_handler_2(message: Message):
     await message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await message.answer(f"НАЗВАНИЕ:\n{comedy[0]['name']}\n\nОПИСАНИЕ:\n{comedy[0]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{comedy[0]['name']}\n\nОПИСАНИЕ:\n{comedy[0]['descript']}", reply_markup=linkme4)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{comedy[1]['name']}\n\nОПИСАНИЕ:\n{comedy[1]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{comedy[1]['name']}\n\nОПИСАНИЕ:\n{comedy[1]['descript']}", reply_markup=linkme5)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{comedy[2]['name']}\n\nОПИСАНИЕ:\n{comedy[2]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{comedy[2]['name']}\n\nОПИСАНИЕ:\n{comedy[2]['descript']}", reply_markup=linkme6)
 
 @router.message(F.text == "Ужасы 👻")
 async def ret_menu_handler_3(message: Message):
     await message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await message.answer(f"НАЗВАНИЕ:\n{horror[0]['name']}\n\nОПИСАНИЕ:\n{horror[0]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{horror[0]['name']}\n\nОПИСАНИЕ:\n{horror[0]['descript']}",  reply_markup=linkme7)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{horror[1]['name']}\n\nОПИСАНИЕ:\n{horror[1]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{horror[1]['name']}\n\nОПИСАНИЕ:\n{horror[1]['descript']}",  reply_markup=linkme8)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{horror[2]['name']}\n\nОПИСАНИЕ:\n{horror[2]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{horror[2]['name']}\n\nОПИСАНИЕ:\n{horror[2]['descript']}",  reply_markup=linkme9)
 
 @router.message(F.text == "Боевик 🔫")
 async def ret_menu_handler_4(message: Message):
     await message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await message.answer(f"НАЗВАНИЕ:\n{action[0]['name']}\n\nОПИСАНИЕ:\n{action[0]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{action[0]['name']}\n\nОПИСАНИЕ:\n{action[0]['descript']}",  reply_markup=linkme10)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{action[1]['name']}\n\nОПИСАНИЕ:\n{action[1]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{action[1]['name']}\n\nОПИСАНИЕ:\n{action[1]['descript']}",  reply_markup=linkme11)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{action[2]['name']}\n\nОПИСАНИЕ:\n{action[2]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{action[2]['name']}\n\nОПИСАНИЕ:\n{action[2]['descript']}",  reply_markup=linkme12)
 
 @router.message(F.text == "Научная фантастика🚀")
 async def ret_menu_handler_5(message: Message):
     await message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await message.answer(f"НАЗВАНИЕ:\n{sci_fi[0]['name']}\n\nОПИСАНИЕ:\n{sci_fi[0]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{sci_fi[0]['name']}\n\nОПИСАНИЕ:\n{sci_fi[0]['descript']}", reply_markup=linkme13)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{sci_fi[1]['name']}\n\nОПИСАНИЕ:\n{sci_fi[1]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{sci_fi[1]['name']}\n\nОПИСАНИЕ:\n{sci_fi[1]['descript']}", reply_markup=linkme14)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{sci_fi[2]['name']}\n\nОПИСАНИЕ:\n{sci_fi[2]['descript']}")
+    await message.answer(f"НАЗВАНИЕ:\n{sci_fi[2]['name']}\n\nОПИСАНИЕ:\n{sci_fi[2]['descript']}", reply_markup=linkme15)

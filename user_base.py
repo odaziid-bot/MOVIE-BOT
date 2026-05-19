@@ -30,5 +30,4 @@ def user_db(name, fav_genre):
         print(*row)
 
 
-
     conn.commit()
