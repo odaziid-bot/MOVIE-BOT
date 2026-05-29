@@ -18,6 +18,10 @@ from keyboards import chek_1, chek_2, chek_3, chek_4, chek_5
 from keyboards import choice_key
 from keyboards import menu_do
 from keyboards import linkme1, linkme2, linkme3, linkme4, linkme5, linkme6, linkme7, linkme8, linkme9, linkme10, linkme11, linkme12, linkme13, linkme14, linkme15
+from covers import wes_pic
+
+#Картинки для фильмов из раздела "Вестерн"
+path1, path2, path3 = wes_pic()
 
 router = Router()
 
@@ -61,20 +65,24 @@ async def choice_n0_handler(callback: CallbackQuery):
     await asyncio.sleep(2)
     await mes2.edit_text("Как передумаешь, приходи заново 😉")
 
+
 @router.callback_query(F.data == "get_yes_ch")
 async def choice_handler(callback: CallbackQuery, state: FSMContext):
     await callback.answer()
     data = await state.get_data()
-    if data['fav_genre'] == "ВЕСТЕРН 🤠🏜️":
-        await callback.message.answer("ГОТОВО", reply_markup=chek_1)
-    elif data['fav_genre'] == "КОМЕДИЯ 🤣":
-        await callback.message.answer("ГОТОВО", reply_markup=chek_2)
-    elif data['fav_genre'] == "УЖАСЫ 👻":
-        await callback.message.answer("ГОТОВО", reply_markup=chek_3)
-    elif data['fav_genre'] == "БОЕВИК 🔫":
-        await callback.message.answer("ГОТОВО", reply_markup=chek_4)
-    elif data['fav_genre'] == "НАУЧНАЯ ФАНТАСТИКА 🚀":
-        await callback.message.answer("ГОТОВО", reply_markup=chek_5)
+    #Convert "if" to match
+    fav_genre = data['fav_genre']
+    match (fav_genre): 
+        case "ВЕСТЕРН 🤠🏜️":
+          await callback.message.answer("ГОТОВО", reply_markup=chek_1)
+        case "КОМЕДИЯ 🤣":
+          await callback.message.answer("ГОТОВО", reply_markup=chek_2)
+        case "УЖАСЫ 👻":
+          await callback.message.answer("ГОТОВО", reply_markup=chek_3)
+        case "БОЕВИК 🔫":
+          await callback.message.answer("ГОТОВО", reply_markup=chek_4)
+        case "НАУЧНАЯ ФАНТАСТИКА 🚀":
+         await callback.message.answer("ГОТОВО", reply_markup=chek_5)
     
     
 
@@ -82,11 +90,11 @@ async def choice_handler(callback: CallbackQuery, state: FSMContext):
 async def mov1_list(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await callback.message.answer(f"НАЗВАНИЕ:\n{western[0]['name']}\n\nОПИСАНИЕ:\n{western[0]['descript']}", reply_markup=linkme1)
+    await callback.message.answer_photo(photo=FSInputFile(path1), caption=f"НАЗВАНИЕ:\n{western[0]['name']}\n\nОПИСАНИЕ:\n{western[0]['descript']}", reply_markup=linkme1)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{western[1]['name']}\n\nОПИСАНИЕ:\n{western[1]['descript']}", reply_markup=linkme2)
+    await callback.message.answer_photo(photo=FSInputFile(path2), caption=f"НАЗВАНИЕ:\n{western[1]['name']}\n\nОПИСАНИЕ:\n{western[1]['descript']}", reply_markup=linkme2)
     await asyncio.sleep(1)
-    await callback.message.answer(f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}", reply_markup=linkme3)
+    await callback.message.answer_photo(photo=FSInputFile(path3), caption=f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}", reply_markup=linkme3)
 
 @router.callback_query(F.data == "get_chek_2")
 async def mov2_list(callback: CallbackQuery):

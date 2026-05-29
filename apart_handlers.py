@@ -13,6 +13,9 @@ from movies import western, comedy, horror, action, sci_fi
 from keyboards import fav_genre_key_1
 from keyboards import menu_do
 from keyboards import linkme1, linkme2, linkme3, linkme4, linkme5, linkme6, linkme7, linkme8, linkme9, linkme10, linkme11, linkme12, linkme13, linkme14, linkme15
+from covers import wes_pic
+
+path1_p, path2_p, path3_p = wes_pic()
 
 router = Router()
 
@@ -23,11 +26,11 @@ async def return_menu(message: Message):
 @router.message(F.text == "Вестерн 🤠🏜️")
 async def ret_menu_handler_1(message: Message):
     await message.answer("ПОДБОРКА:", reply_markup=menu_do())
-    await message.answer(f"НАЗВАНИЕ:\n{western[0]['name']}\n\nОПИСАНИЕ:\n{western[0]['descript']}", reply_markup=linkme1)
+    await message.answer_photo(photo=FSInputFile(path1_p), caption=f"НАЗВАНИЕ:\n{western[0]['name']}\n\nОПИСАНИЕ:\n{western[0]['descript']}", reply_markup=linkme1)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{western[1]['name']}\n\nОПИСАНИЕ:\n{western[1]['descript']}", reply_markup=linkme2)
+    await message.answer_photo(photo=FSInputFile(path2_p), caption=f"НАЗВАНИЕ:\n{western[1]['name']}\n\nОПИСАНИЕ:\n{western[1]['descript']}", reply_markup=linkme2)
     await asyncio.sleep(1)
-    await message.answer(f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}", reply_markup=linkme3)
+    await message.answer_photo(photo=FSInputFile(path3_p), caption=f"НАЗВАНИЕ:\n{western[2]['name']}\n\nОПИСАНИЕ:\n{western[2]['descript']}", reply_markup=linkme3)
 
 @router.message(F.text == "Комедия 🤣")
 async def ret_menu_handler_2(message: Message):
